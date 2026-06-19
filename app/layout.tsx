@@ -6,7 +6,7 @@ import CustomCursor from '../components/ui/CustomCursor';
 import FluidBackground from '../components/ui/FluidBackground';
 import ScrollProgress from '../components/ui/ScrollProgress';
 
-const siteUrl = "https://monkhtor-portfolio.vercel.app";
+const siteUrl = "https://monhtor-portfolio.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
