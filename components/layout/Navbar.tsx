@@ -32,8 +32,9 @@ const Navbar = () => {
           animate={{ y: 0, opacity: 1 }}
           className={`flex items-center justify-between px-8 py-3 transition-all duration-500 ${
             scrolled
-              ? "bg-white/5 backdrop-blur-xl border border-white/10 rounded-full w-[90%] md:w-[60%] shadow-2xl"
-              : "bg-transparent w-full"
+                ? "bg-black/40 backdrop-blur-xl border border-white/10 rounded-full w-[90%] md:w-[60%] shadow-2xl"
+                : "bg-transparent w-full"
+
           }`}
         >
           <motion.div

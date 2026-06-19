@@ -5,33 +5,34 @@ import Skills from "../components/sections/Skills";
 import Contact from "../components/sections/Contact";
 import Navbar from "../components/layout/Navbar";
 import PageTransition from "../components/ui/PageTransition";
+import SmoothSection from "../components/ui/SmoothSection";
 
 export default function HomePage() {
   return (
     <>
       <PageTransition />
-      <main className="relative">  {/* ← bg-[#050505] хасав */}
+      <main className="relative z-10">
         <Navbar />
-        
-        <section id="home" className="min-h-screen">
+
+        <SmoothSection id="home" className="min-h-screen">
           <Hero />
-        </section>
+        </SmoothSection>
 
-        <section id="about" className="min-h-screen border-t border-white/5">
+        <SmoothSection id="about" className="min-h-screen border-t border-white/5">
           <About />
-        </section>
+        </SmoothSection>
 
-        <section id="projects" className="min-h-screen border-t border-white/5">
+        <SmoothSection id="projects" className="min-h-screen border-t border-white/5">
           <Projects />
-        </section>
+        </SmoothSection>
 
-        <section id="skills" className="min-h-screen border-t border-white/5">
+        <SmoothSection id="skills" className="min-h-screen border-t border-white/5">
           <Skills />
-        </section>
+        </SmoothSection>
 
-        <section id="contact" className="min-h-screen border-t border-white/5">
+        <SmoothSection id="contact" className="min-h-screen border-t border-white/5">
           <Contact />
-        </section>
+        </SmoothSection>
       </main>
     </>
   );

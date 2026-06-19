@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Container from "../ui/Container";
+import Reveal from "../ui/Reveal";
 
 const stats = [
   { value: "2+", label: "Years Experience" },
@@ -10,25 +11,16 @@ const stats = [
 
 const About = () => {
   return (
-    <section className="py-32 bg-[#050505] relative overflow-hidden">
-      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-blue-600/5 blur-[150px] rounded-full -z-10" />
-
+    <section className="py-32 relative overflow-hidden">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
           {/* Зүүн тал: Зураг */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            <div className="absolute inset-0 bg-blue-500/10 blur-[60px] rounded-[2rem] scale-90" />
-            <div className="relative rounded-[2rem] overflow-hidden border border-white/10 aspect-[3/4] max-w-sm mx-auto">
-              <div className="w-full h-full bg-gradient-to-br from-blue-900/40 via-gray-900 to-black flex items-center justify-center">
+          <Reveal direction="left" className="relative">
+            <div className="relative rounded-[2rem] overflow-hidden border border-white/10 aspect-[3/4] max-w-sm mx-auto bg-white/5 backdrop-blur-sm">
+              <div className="w-full h-full flex items-center justify-center">
                 <span className="text-white/20 text-sm tracking-widest uppercase">Your Photo</span>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             </div>
 
             <motion.div
@@ -39,14 +31,10 @@ const About = () => {
               <p className="text-xs text-gray-500 uppercase tracking-widest">Based in</p>
               <p className="text-white font-bold mt-1">Ulaanbaatar, MN 🇲🇳</p>
             </motion.div>
-          </motion.div>
+          </Reveal>
 
           {/* Баруун тал: Текст */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          <Reveal direction="right">
             <p className="text-xs uppercase tracking-[0.3em] text-blue-500 mb-6">About me</p>
 
             <h2 className="text-5xl md:text-6xl font-black tracking-tighter text-white leading-tight mb-8">
@@ -67,15 +55,10 @@ const About = () => {
 
             <div className="grid grid-cols-3 gap-6 mt-12 pt-12 border-t border-white/5">
               {stats.map((stat, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                >
+                <Reveal key={i} direction="up" delay={i * 0.1}>
                   <p className="text-4xl font-black text-white">{stat.value}</p>
                   <p className="text-xs text-gray-500 uppercase tracking-widest mt-1">{stat.label}</p>
-                </motion.div>
+                </Reveal>
               ))}
             </div>
 
@@ -87,7 +70,7 @@ const About = () => {
             >
               Download CV <span>↓</span>
             </motion.a>
-          </motion.div>
+          </Reveal>
 
         </div>
       </Container>

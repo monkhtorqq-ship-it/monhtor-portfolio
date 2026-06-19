@@ -50,7 +50,7 @@ const ProjectCard = ({ title, desc }: { title: string; desc: string }) => {
 
 const Projects = () => {
   return (
-    <section className="py-32 bg-black overflow-hidden">
+    <section className="py-32 relative overflow-hidden">
       <Container>
         <SectionTitle title="Featured Projects" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-20">

@@ -6,10 +6,7 @@ import MagneticButton from "../ui/MagneticButton";
 
 const Contact = () => {
   return (
-    <section className="py-32 bg-[#050505] relative overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-600/10 blur-[150px] rounded-full -z-10"></div>
-
+    <section className="py-32 relative overflow-hidden">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
           
