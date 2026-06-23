@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Container from "../ui/Container";
 import Reveal from "../ui/Reveal";
+import Image from "next/image";
 
 const stats = [
   { value: "2+", label: "Years Experience" },
@@ -18,8 +19,14 @@ const About = () => {
           {/* Зүүн тал: Зураг */}
           <Reveal direction="left" className="relative">
             <div className="relative rounded-[2rem] overflow-hidden border border-white/10 aspect-[3/4] max-w-sm mx-auto bg-white/5 backdrop-blur-sm">
-              <div className="w-full h-full flex items-center justify-center">
-                <span className="text-white/20 text-sm tracking-widest uppercase">Your Photo</span>
+              <div className="w-full h-full rounded-[2rem] overflow-hidden border border-white/10 relative">
+                <Image
+                  src="/hero.jpeg"
+                  fill
+                  className="object-cover object-top"
+                  alt="Monkhtor"
+                  priority
+                />
               </div>
             </div>
 
