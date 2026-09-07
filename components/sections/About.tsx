@@ -21,7 +21,7 @@ const About = () => {
             <div className="relative rounded-[2rem] overflow-hidden border border-white/10 aspect-[3/4] max-w-sm mx-auto bg-white/5 backdrop-blur-sm">
               <div className="w-full h-full rounded-[2rem] overflow-hidden border border-white/10 relative">
                 <Image
-                  src="/hero.jpeg"
+                  src="/realme.png"
                   fill
                   className="object-cover object-top"
                   alt="Monkhtor"
