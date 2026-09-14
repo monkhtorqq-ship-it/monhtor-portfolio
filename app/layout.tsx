@@ -11,7 +11,7 @@ const siteUrl = "https://monhtor-portfolio.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Monkhtor | Digital Architect & Full-Stack Developer",
+    default: "Monkhtor |  ",
     template: "%s | Monkhtor",
   },
   description:
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     locale: "mn_MN",
     url: siteUrl,
     siteName: "Monkhtor Portfolio",
-    title: "Monkhtor | Digital Architect & Full-Stack Developer",
+    title: "Monkhtor | ",
     description:
       "Next.js, TypeScript, Tailwind CSS ашиглан орчин үеийн веб апликейшн бүтээдэг Full-Stack Developer.",
     images: [
@@ -48,17 +48,17 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Monkhtor | Digital Architect & Full-Stack Developer",
+    title: "Monkhtor | ",
     description:
       "Next.js, TypeScript, Tailwind CSS ашиглан орчин үеийн веб апликейшн бүтээдэг Full-Stack Developer.",
     images: ["/og-image.png"],
   },
-
+  
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
   },
-
+  
   robots: {
     index: true,
     follow: true,

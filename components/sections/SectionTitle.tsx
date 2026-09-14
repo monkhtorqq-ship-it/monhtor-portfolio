@@ -2,12 +2,11 @@
 import { motion } from "framer-motion";
 
 interface Props {
-  number?: string;
   title: string;
   subtitle?: string;
 }
 
-const SectionTitle: React.FC<Props> = ({ number, title, subtitle }) => {
+const SectionTitle: React.FC<Props> = ({ title, subtitle }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -16,11 +15,6 @@ const SectionTitle: React.FC<Props> = ({ number, title, subtitle }) => {
       viewport={{ once: true }}
       className="mb-20"
     >
-      {number && (
-        <p className="text-xs uppercase tracking-[0.4em] text-blue-500 mb-4">
-          {number}
-        </p>
-      )}
       <h2 className="text-5xl md:text-7xl font-black tracking-tighter text-white leading-none">
         {title}
       </h2>
